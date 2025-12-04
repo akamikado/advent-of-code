@@ -1,0 +1,13 @@
+.{
+    .name = .advent_of_code_2025,
+    .version = "0.0.0",
+    .fingerprint = 0xe67df067656fa0a3,
+    .minimum_zig_version = "0.16.0-dev.1484+d0ba6642b",
+    .dependencies = .{
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "day1",
+    },
+}
