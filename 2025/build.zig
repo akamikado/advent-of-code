@@ -4,7 +4,7 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const completed = 5;
+    const completed = 6;
 
     var executables: [completed]*std.Build.Step.Compile = undefined;
     for (executables, 0..) |_, i| {
