@@ -4,7 +4,12 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const completed = 9;
+    const completed = 10;
+
+    const z3 = b.dependency("z3", .{
+        .target = target,
+        .optimize = optimize,
+    });
 
     var executables: [completed]*std.Build.Step.Compile = undefined;
     for (executables, 0..) |_, i| {
@@ -21,6 +26,14 @@ pub fn build(b: *std.Build) void {
                 .optimize = optimize,
             }),
         });
+
+        switch (i + 1) {
+            10 => {
+                exe.root_module.addImport("z3_bindings", z3.module("z3_bindings"));
+                exe.root_module.addImport("z3", z3.module("z3"));
+            },
+            else => {}
+        }
 
         b.installArtifact(exe);
 

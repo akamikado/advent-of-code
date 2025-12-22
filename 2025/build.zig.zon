@@ -4,6 +4,10 @@
     .fingerprint = 0xe67df067656fa0a3,
     .minimum_zig_version = "0.15.2",
     .dependencies = .{
+        .z3 = .{
+            .url = "git+https://github.com/Rexicon226/zig-z3.git#fb7ecd9007a559b7410a4e3f8e7b3565cb8c20e1",
+            .hash = "z3-0.1.0-bVhhr-UvCwAvAuVeNWGL47TfYFOrAONCgUVB7G0w7Rav",
+        },
     },
     .paths = .{
         "build.zig",
