@@ -4,7 +4,7 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const completed = 10;
+    const completed = 11;
 
     const z3 = b.dependency("z3", .{
         .target = target,
